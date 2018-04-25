@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1>Recent Added Images</h1>
+    <ul>
+      <li *ngFor="let image of images | async" class="img-fluid">
+        <a routerLink="['/images',image.$key]">
+          <img src="{{image.url}}" class="tn">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class = container>
+  <div *ngIf="upload">
+  <div class="progress">
+    <div class="progress-bar progress-bar-animated"
+    [ngStyle]="{'width':upload?.progress+'%'}">
+    </div>
+  </div>
+  progress: {{upload?.progress}}%Complete
+</div>
+  <div>
+  <h2 class="heading">Upload New Images</h2>
+  <input type="file" (change)="handleFile($event)" multiple>
+  <button class="btn btn-primary" (click)="uploadFile()">Upload Images</button>
+</div>
+</div>
